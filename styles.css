@@ -1,0 +1,314 @@
+/* Reset default styles for body */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic body styles */
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f4f8;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Header styles */
+header {
+  background-color: #1e3a8a;
+  color: #fff;
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* Main container styles */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Title styling */
+.title {
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1e3a8a;
+}
+
+/* Filters section */
+.filters {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Filters labels and inputs */
+.filters label {
+  display: inline-block;
+  margin-right: 0.5rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.filters input,
+.filters select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 5px;
+}
+
+/* Product list layout */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Product card styling */
+.product {
+  background-color: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-align: center;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.product img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product p {
+  font-size: 18px;
+  margin: 0.5rem 0;
+  color: #172026;
+  text-align: left;
+}
+
+.product .heart {
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  color: #ef4444;
+  cursor: pointer;
+  text-align: left;
+}
+
+.product .heart:hover {
+  color: #dc2626;
+}
+
+/* Loading message styling */
+.loading {
+  text-align: center;
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  color: #64748b;
+}
+
+/* Load more button styling */
+.load-more {
+  display: block;
+  margin: 1rem auto;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: #1e3a8a;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.load-more:hover {
+  background-color: #374151;
+}
+
+.load-more:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* Styling for the 'No Results' message */
+.no-results {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #9ca3af;
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.no-results img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+.no-results p {
+  font-size: 1rem;
+  color: #4b5563;
+  max-width: 90%;
+  margin-top: 1rem;
+  line-height: 1.5;
+}
+
+/* Media query for 320px screens */
+@media (max-width: 320px) {
+  header {
+    font-size: 1.2rem;
+  }
+
+  .product img {
+    height: 130px;
+  }
+
+  .product p {
+    font-size: 0.8rem;
+  }
+
+  .filters label,
+  .filters input,
+  .filters select {
+    font-size: 0.8rem;
+  }
+
+  .load-more {
+    font-size: 0.8rem;
+    padding: 0.4rem 1rem;
+  }
+
+  .no-results p {
+    font-size: 0.8rem;
+  }
+}
+
+/* Media query for mobile-sized screens */
+@media (max-width: 480px) {
+  header {
+    font-size: 1.3rem;
+  }
+
+  .product img {
+    height: 150px;
+  }
+
+  .product p {
+    font-size: 0.9rem;
+  }
+
+  .filters label,
+  .filters input,
+  .filters select {
+    font-size: 0.9rem;
+  }
+
+  .load-more {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .no-results p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Media query for tablet-sized screens */
+@media (max-width: 768px) {
+  header {
+    font-size: 1.5rem;
+  }
+
+  .product p {
+    font-size: 1rem;
+  }
+
+  .filters {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .filters label {
+    margin-bottom: 0.5rem;
+  }
+
+  .product img {
+    height: 180px;
+  }
+}
+
+/* Media query for Desktop Small screens */
+@media (min-width: 1024px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  .product img {
+    height: 220px;
+  }
+}
+
+/* Media query for Desktop Medium screens */
+@media (min-width: 1280px) {
+  .product-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .product img {
+    height: 250px;
+  }
+
+  header {
+    font-size: 2rem;
+  }
+}
+
+/* Media query for Desktop Large screens */
+@media (min-width: 1440px) {
+  .container {
+    padding: 2.5rem;
+  }
+
+  .product img {
+    height: 280px;
+  }
+}
+
+/* Media query for Desktop X-Large screens */
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1600px;
+  }
+
+  .product img {
+    height: 300px;
+  }
+}
